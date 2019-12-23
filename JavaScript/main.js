@@ -1,9 +1,9 @@
-$(document).ready(function () {
-    
+$(document).ready(function() {
+
     $(".nav-icon").click(function () {
         $(".full-nav").addClass("open");
     });
-    
+
     $(".nav-close").click(function () {
         $(".full-nav").removeClass("open");
     });
@@ -12,27 +12,24 @@ $(document).ready(function () {
         var sc = $(window).scrollTop();
         if (sc > 100) {
             $(".nav").addClass("sticky");
-        }
-        else {
+        } else {
             $(".nav").removeClass("sticky");
         }
-    
-        });
 
-    
-     $('.bxslider').bxSlider({
-            mode: 'horizontal',
-            moveSlides: 1,
-            slideMargin: 40,
-            infiniteLoop: true,
-            minSlides: 1,
-            maxSlides: 1,
-            speed: 1200
     });
-    
-    
-    
-    
+
+
+    $('.bxslider').bxSlider({
+        mode: 'horizontal',
+        moveSlides: 1,
+        slideMargin: 40,
+        infiniteLoop: true,
+        minSlides: 1,
+        maxSlides: 1,
+        speed: 1200
+    });
+
+
     if ($(".swiper-container").hasClass("team-member-slider")) {
         var swiper = new Swiper('.swiper-container', {
             sliderPerView: 3,
@@ -53,7 +50,7 @@ $(document).ready(function () {
                 depth: 200,
                 modifier: 1,
                 slideShadows: false
-                
+
             },
             breakpoints: {
                 767: {
@@ -64,13 +61,13 @@ $(document).ready(function () {
             }
         });
     }
-    
-    
+
+
     $("#work").magnificPopup({
         delegate: 'a',
         type: 'image',
         gallery: {
             enabled: true
         }
-    });    
+    });
 });
